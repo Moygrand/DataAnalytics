@@ -1,0 +1,2397 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/25/2024 7:28:00 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-FMAB19I"
+  DTS:CreatorName="DESKTOP-FMAB19I\mella"
+  DTS:DTSID="{AFF08707-D77C-40A5-96E3-8C4377F4C238}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="76"
+  DTS:VersionGUID="{20D4B606-EA75-4483-B6F4-A4105F9606DA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{FB54BDBC-29B6-4CC5-A10F-A25A53149577}"
+      DTS:ObjectName="Administrador de conexiones con Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\mella\OneDrive\Data Analytics\SSI ETL\errores.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=NO&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[bank]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{667A4E7A-AF1F-4E5C-8D4D-0DB9EB88155A}"
+      DTS:ObjectName="bank">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\mella\OneDrive\Data Analytics\SSI ETL\Global+Bank.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="id"
+              DTS:DTSID="{7A1B1863-085C-4538-9544-CCCB515B2D99}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="regionname"
+              DTS:DTSID="{472276B1-2D85-44E7-9B81-B2C7739B297F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="countryname"
+              DTS:DTSID="{605A4A06-6A1A-4455-8D40-E7839CDC2A63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="projectstatusdisplay"
+              DTS:DTSID="{CA86C3E8-8D29-4769-80C6-178D22D1605C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="last_stage_reached_name"
+              DTS:DTSID="{4B7A101E-06A0-4966-BC4C-B142571F6033}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="project_name"
+              DTS:DTSID="{11762C56-6AD9-4984-9BFF-1A13F980083F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pdo"
+              DTS:DTSID="{9531E292-1C42-45F2-9F73-A5190E52C6D5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="impagency"
+              DTS:DTSID="{DD4BD79B-EF79-42C7-BA0F-66951814F4CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cons_serv_reqd_ind"
+              DTS:DTSID="{E3D7C9F2-2817-4E2B-B01E-545B09793B70}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="url"
+              DTS:DTSID="{BDDDDABD-6B50-4AE4-84E2-C6C892877D31}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="boardapprovaldate"
+              DTS:DTSID="{ABB58FF0-C4A5-4DB3-9663-82A9B56213FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="closingdate"
+              DTS:DTSID="{3A54BE05-5BE0-4DCF-8595-ED9001346DE2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="projectfinancialtype"
+              DTS:DTSID="{4C4F7E15-14E1-41D1-9654-A2987A10E60F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="curr_project_cost"
+              DTS:DTSID="{15661A01-6847-4F2D-877C-6D1617118506}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="curr_ibrd_commitment"
+              DTS:DTSID="{C4898A6E-E7B7-4640-B16D-DC695EC5BF0E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="curr_ida_commitment"
+              DTS:DTSID="{E34AD129-7338-4344-886D-B6D36F8A64D0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="curr_total_commitment"
+              DTS:DTSID="{AB4F1283-4A46-47A6-9331-777F8F030F1A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="21"
+              DTS:TextQualified="True"
+              DTS:ObjectName="grantamt"
+              DTS:DTSID="{C00B9C76-D948-42DF-8A7C-BB0D705E9AB5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="borrower"
+              DTS:DTSID="{0A715DDB-859A-46AC-BC32-4E1F2CB93EE0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lendinginstr"
+              DTS:DTSID="{BF41C58B-9E4C-486B-B9C4-8AFA38603F10}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="envassesmentcategorycode"
+              DTS:DTSID="{E7AEEC86-E358-4443-A146-53022D334DC1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="esrc_ovrl_risk_rate"
+              DTS:DTSID="{9A55832C-CD40-480E-894B-D09B489091AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sector1"
+              DTS:DTSID="{F1391907-F575-4E06-8A7F-A1670F05406A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sector2"
+              DTS:DTSID="{18612011-4B76-453F-9799-5CB69BCBA0B9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sector3"
+              DTS:DTSID="{A2630517-9607-47D7-832C-B8183D376958}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="theme1"
+              DTS:DTSID="{5B11FBE0-8C8E-4BF1-A7DC-6B070E989F3F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="theme2"
+              DTS:DTSID="{958DF717-755C-4F63-948B-2BEB92468AD8}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[localhost]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7C21D2AE-5C52-447C-8E6F-DF1885930A57}"
+      DTS:ObjectName="localhost">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=Globalbank;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{7C21D2AE-5C52-447C-8E6F-DF1885930A57}localhost;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Borrar datos"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{3046C642-03AA-4B8A-BC9C-2A3D3C0CCBD3}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Borrar datos"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7C21D2AE-5C52-447C-8E6F-DF1885930A57}"
+          SQLTask:SqlStatementSource="truncate table gbd;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Calculos"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{83D14B4A-63A2-4D30-B965-5552EF2DC70C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Calculos"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Calculos\Calculos por region"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Agregado;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;3"
+              description="Agrega datos mediante funciones como Average, Sum, Count, Max y Min. Por ejemplo, se agrupan datos para calcular la suma de las ventas por producto o el promedio de visitas por día."
+              name="Calculos por region"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número aproximado de valores distintos de una columna que cuenta la agregación de forma distintiva. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 valores de clave. No especificado indica que no se usa ningún valor de CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el número exacto de valores distintos de una columna que cuenta la agregación de forma distintiva. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene prioridad."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje en el que puede ampliarse la memoria durante la agregación. Los valores válidos están comprendidos entre 1 y 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Calculos\Calculos por region.Inputs[Entrada de agregado 1]"
+                  name="Entrada de agregado 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Calculos\Calculos por region.Inputs[Entrada de agregado 1].Columns[regionname]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="regionname"
+                      lineageId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].Columns[regionname]" />
+                    <inputColumn
+                      refId="Package\Calculos\Calculos por region.Inputs[Entrada de agregado 1].Columns[curr_total_commitment]"
+                      cachedDataType="numeric"
+                      cachedName="curr_total_commitment"
+                      cachedPrecision="20"
+                      lineageId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].Columns[curr_total_commitment]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Calculos\Calculos por region.Outputs[Salida de agregado 1]"
+                  name="Salida de agregado 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Especifica el número aproximado de claves GROUP BY que produce la agregación. Mínimo indica 500.000 valores de clave, Medio indica 5.000.000 de valores de clave y Alto indica más de 25.000.000 de valores de clave. No especificado indica que no se usó ningún valor de KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Especifica el número exacto de claves GROUP BY que produce la agregación. Si se especifica un valor de KeyScale, el valor de Keys tiene prioridad."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Calculos\Calculos por region.Outputs[Salida de agregado 1].Columns[regionname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      lineageId="Package\Calculos\Calculos por region.Outputs[Salida de agregado 1].Columns[regionname]"
+                      name="regionname">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].Columns[regionname]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculos\Calculos por region.Outputs[Salida de agregado 1].Columns[sum_total_commitment]"
+                      dataType="numeric"
+                      lineageId="Package\Calculos\Calculos por region.Outputs[Salida de agregado 1].Columns[sum_total_commitment]"
+                      name="sum_total_commitment"
+                      precision="20">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].Columns[curr_total_commitment]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Calculos\Calculos por region.Outputs[Salida de agregado 1].Columns[avg_total_commitment]"
+                      dataType="numeric"
+                      lineageId="Package\Calculos\Calculos por region.Outputs[Salida de agregado 1].Columns[avg_total_commitment]"
+                      name="avg_total_commitment"
+                      precision="20">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el id. de la columna de entrada usada en la agregación."
+                          name="AggregationColumnId">#{Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].Columns[curr_total_commitment]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el tipo de agregación."
+                          name="AggregationType"
+                          typeConverter="AggregationType">5</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica si la columna requiere tratamiento especial porque puede contener datos de tamaño excesivo o porque requiere mayor precisión que el tipo de datos float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación de cadenas."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Calculos\Destino regioncalcs"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Destino regioncalcs"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[regioncalcs]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Calculos\Destino regioncalcs.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Calculos\Destino regioncalcs.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Calculos\Destino regioncalcs.Inputs[Entrada de destino de OLE DB].Columns[regionname]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="500"
+                      cachedName="regionname"
+                      externalMetadataColumnId="Package\Calculos\Destino regioncalcs.Inputs[Entrada de destino de OLE DB].ExternalColumns[regionname]"
+                      lineageId="Package\Calculos\Calculos por region.Outputs[Salida de agregado 1].Columns[regionname]" />
+                    <inputColumn
+                      refId="Package\Calculos\Destino regioncalcs.Inputs[Entrada de destino de OLE DB].Columns[sum_total_commitment]"
+                      cachedDataType="numeric"
+                      cachedName="sum_total_commitment"
+                      cachedPrecision="20"
+                      externalMetadataColumnId="Package\Calculos\Destino regioncalcs.Inputs[Entrada de destino de OLE DB].ExternalColumns[sum_total_commitment]"
+                      lineageId="Package\Calculos\Calculos por region.Outputs[Salida de agregado 1].Columns[sum_total_commitment]" />
+                    <inputColumn
+                      refId="Package\Calculos\Destino regioncalcs.Inputs[Entrada de destino de OLE DB].Columns[avg_total_commitment]"
+                      cachedDataType="numeric"
+                      cachedName="avg_total_commitment"
+                      cachedPrecision="20"
+                      externalMetadataColumnId="Package\Calculos\Destino regioncalcs.Inputs[Entrada de destino de OLE DB].ExternalColumns[avg_total_commitment]"
+                      lineageId="Package\Calculos\Calculos por region.Outputs[Salida de agregado 1].Columns[avg_total_commitment]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Destino regioncalcs.Inputs[Entrada de destino de OLE DB].ExternalColumns[regionname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="regionname" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Destino regioncalcs.Inputs[Entrada de destino de OLE DB].ExternalColumns[sum_total_commitment]"
+                      dataType="numeric"
+                      name="sum_total_commitment"
+                      precision="20" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Destino regioncalcs.Inputs[Entrada de destino de OLE DB].ExternalColumns[avg_total_commitment]"
+                      dataType="numeric"
+                      name="avg_total_commitment"
+                      precision="20" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Calculos\Destino regioncalcs.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Calculos\Destino regioncalcs.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Calculos\Destino regioncalcs.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Calculos\Destino regioncalcs.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Calculos\Destino regioncalcs.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Calculos\Destino regioncalcs.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Calculos\Origen gbd"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Origen gbd"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[gbd]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Calculos\Origen gbd.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].Columns[regionname]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[regionname]"
+                      length="500"
+                      lineageId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].Columns[regionname]"
+                      name="regionname"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].Columns[curr_total_commitment]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[curr_total_commitment]"
+                      lineageId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].Columns[curr_total_commitment]"
+                      name="curr_total_commitment"
+                      precision="20"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[regionname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="regionname" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[countryname]"
+                      codePage="1252"
+                      dataType="text"
+                      name="countryname" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[projectstatusdisplay]"
+                      codePage="1252"
+                      dataType="text"
+                      name="projectstatusdisplay" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[last_stage_reached_name]"
+                      codePage="1252"
+                      dataType="text"
+                      name="last_stage_reached_name" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[project_name]"
+                      codePage="1252"
+                      dataType="text"
+                      name="project_name" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[pdo]"
+                      codePage="1252"
+                      dataType="text"
+                      name="pdo" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[impagency]"
+                      codePage="1252"
+                      dataType="text"
+                      name="impagency" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[cons_serv_reqd_ind]"
+                      codePage="1252"
+                      dataType="text"
+                      name="cons_serv_reqd_ind" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[url]"
+                      codePage="1252"
+                      dataType="text"
+                      name="url" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[boardapprovaldate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="boardapprovaldate" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[closingdate]"
+                      codePage="1252"
+                      dataType="text"
+                      name="closingdate" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[projectfinancialtype]"
+                      codePage="1252"
+                      dataType="text"
+                      name="projectfinancialtype" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[curr_project_cost]"
+                      dataType="numeric"
+                      name="curr_project_cost"
+                      precision="20" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[curr_ibrd_commitment]"
+                      dataType="numeric"
+                      name="curr_ibrd_commitment"
+                      precision="20" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[curr_ida_commitment]"
+                      dataType="numeric"
+                      name="curr_ida_commitment"
+                      precision="20" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[curr_total_commitment]"
+                      dataType="numeric"
+                      name="curr_total_commitment"
+                      precision="20" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[grantamt]"
+                      dataType="numeric"
+                      name="grantamt"
+                      precision="20" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[borrower]"
+                      codePage="1252"
+                      dataType="text"
+                      name="borrower" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[lendinginstr]"
+                      codePage="1252"
+                      dataType="text"
+                      name="lendinginstr" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[envassesmentcategorycode]"
+                      codePage="1252"
+                      dataType="text"
+                      name="envassesmentcategorycode" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[esrc_ovrl_risk_rate]"
+                      codePage="1252"
+                      dataType="text"
+                      name="esrc_ovrl_risk_rate" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[sector1]"
+                      codePage="1252"
+                      dataType="text"
+                      name="sector1" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[sector2]"
+                      codePage="1252"
+                      dataType="text"
+                      name="sector2" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[sector3]"
+                      codePage="1252"
+                      dataType="text"
+                      name="sector3" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[theme1]"
+                      codePage="1252"
+                      dataType="text"
+                      name="theme1" />
+                    <externalMetadataColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB].ExternalColumns[theme2]"
+                      codePage="1252"
+                      dataType="text"
+                      name="theme2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Calculos\Origen gbd.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Calculos\Origen gbd.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Calculos\Origen gbd.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de error de origen de OLE DB].Columns[regionname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      lineageId="Package\Calculos\Origen gbd.Outputs[Salida de error de origen de OLE DB].Columns[regionname]"
+                      name="regionname" />
+                    <outputColumn
+                      refId="Package\Calculos\Origen gbd.Outputs[Salida de error de origen de OLE DB].Columns[curr_total_commitment]"
+                      dataType="numeric"
+                      lineageId="Package\Calculos\Origen gbd.Outputs[Salida de error de origen de OLE DB].Columns[curr_total_commitment]"
+                      name="curr_total_commitment"
+                      precision="20" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Calculos.Paths[Salida de agregado 1]"
+              endId="Package\Calculos\Destino regioncalcs.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de agregado 1"
+              startId="Package\Calculos\Calculos por region.Outputs[Salida de agregado 1]" />
+            <path
+              refId="Package\Calculos.Paths[Salida de origen de OLE DB]"
+              endId="Package\Calculos\Calculos por region.Inputs[Entrada de agregado 1]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Calculos\Origen gbd.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Impor CSV"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{E7B03203-29E4-4594-9F42-7ECC7175F44C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Impor CSV"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Impor CSV\Destino gbd"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Destino gbd"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[gbd]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Impor CSV\Destino gbd.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[localhost]"
+                  connectionManagerRefId="Package.ConnectionManagers[localhost]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="id"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[id]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[id]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[regionname]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="regionname"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[regionname]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[regionname]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[countryname]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="countryname"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[countryname]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[countryname]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[projectstatusdisplay]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="projectstatusdisplay"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[projectstatusdisplay]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[projectstatusdisplay]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[last_stage_reached_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="last_stage_reached_name"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[last_stage_reached_name]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[last_stage_reached_name]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[project_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="project_name"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[project_name]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[project_name]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[pdo]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="pdo"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[pdo]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[pdo]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[impagency]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="impagency"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[impagency]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[impagency]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[cons_serv_reqd_ind]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="cons_serv_reqd_ind"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[cons_serv_reqd_ind]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[cons_serv_reqd_ind]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[url]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="url"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[url]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[url]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[boardapprovaldate]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="boardapprovaldate"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[boardapprovaldate]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[boardapprovaldate]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[closingdate]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="closingdate"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[closingdate]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[closingdate]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[projectfinancialtype]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="projectfinancialtype"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[projectfinancialtype]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[projectfinancialtype]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[curr_project_cost]"
+                      cachedDataType="ui8"
+                      cachedName="curr_project_cost"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[curr_project_cost]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[curr_project_cost]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[curr_ibrd_commitment]"
+                      cachedDataType="ui8"
+                      cachedName="curr_ibrd_commitment"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[curr_ibrd_commitment]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[curr_ibrd_commitment]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[curr_ida_commitment]"
+                      cachedDataType="ui8"
+                      cachedName="curr_ida_commitment"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[curr_ida_commitment]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[curr_ida_commitment]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[curr_total_commitment]"
+                      cachedDataType="ui8"
+                      cachedName="curr_total_commitment"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[curr_total_commitment]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[curr_total_commitment]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[grantamt]"
+                      cachedDataType="ui8"
+                      cachedName="grantamt"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[grantamt]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[grantamt]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[borrower]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="borrower"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[borrower]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[borrower]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[lendinginstr]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="lendinginstr"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[lendinginstr]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[lendinginstr]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[envassesmentcategorycode]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="envassesmentcategorycode"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[envassesmentcategorycode]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[envassesmentcategorycode]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[esrc_ovrl_risk_rate]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="esrc_ovrl_risk_rate"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[esrc_ovrl_risk_rate]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[esrc_ovrl_risk_rate]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[sector1]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="sector1"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[sector1]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[sector1]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[sector2]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="sector2"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[sector2]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[sector2]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[sector3]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="sector3"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[sector3]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[sector3]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[theme1]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="theme1"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[theme1]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[theme1]" />
+                    <inputColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].Columns[theme2]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="theme2"
+                      externalMetadataColumnId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[theme2]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[theme2]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[regionname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="500"
+                      name="regionname" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[countryname]"
+                      codePage="1252"
+                      dataType="text"
+                      name="countryname" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[projectstatusdisplay]"
+                      codePage="1252"
+                      dataType="text"
+                      name="projectstatusdisplay" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[last_stage_reached_name]"
+                      codePage="1252"
+                      dataType="text"
+                      name="last_stage_reached_name" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[project_name]"
+                      codePage="1252"
+                      dataType="text"
+                      name="project_name" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[pdo]"
+                      codePage="1252"
+                      dataType="text"
+                      name="pdo" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[impagency]"
+                      codePage="1252"
+                      dataType="text"
+                      name="impagency" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[cons_serv_reqd_ind]"
+                      codePage="1252"
+                      dataType="text"
+                      name="cons_serv_reqd_ind" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[url]"
+                      codePage="1252"
+                      dataType="text"
+                      name="url" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[boardapprovaldate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="boardapprovaldate" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[closingdate]"
+                      codePage="1252"
+                      dataType="text"
+                      name="closingdate" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[projectfinancialtype]"
+                      codePage="1252"
+                      dataType="text"
+                      name="projectfinancialtype" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[curr_project_cost]"
+                      dataType="numeric"
+                      name="curr_project_cost"
+                      precision="20" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[curr_ibrd_commitment]"
+                      dataType="numeric"
+                      name="curr_ibrd_commitment"
+                      precision="20" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[curr_ida_commitment]"
+                      dataType="numeric"
+                      name="curr_ida_commitment"
+                      precision="20" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[curr_total_commitment]"
+                      dataType="numeric"
+                      name="curr_total_commitment"
+                      precision="20" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[grantamt]"
+                      dataType="numeric"
+                      name="grantamt"
+                      precision="20" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[borrower]"
+                      codePage="1252"
+                      dataType="text"
+                      name="borrower" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[lendinginstr]"
+                      codePage="1252"
+                      dataType="text"
+                      name="lendinginstr" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[envassesmentcategorycode]"
+                      codePage="1252"
+                      dataType="text"
+                      name="envassesmentcategorycode" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[esrc_ovrl_risk_rate]"
+                      codePage="1252"
+                      dataType="text"
+                      name="esrc_ovrl_risk_rate" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[sector1]"
+                      codePage="1252"
+                      dataType="text"
+                      name="sector1" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[sector2]"
+                      codePage="1252"
+                      dataType="text"
+                      name="sector2" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[sector3]"
+                      codePage="1252"
+                      dataType="text"
+                      name="sector3" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[theme1]"
+                      codePage="1252"
+                      dataType="text"
+                      name="theme1" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB].ExternalColumns[theme2]"
+                      codePage="1252"
+                      dataType="text"
+                      name="theme2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Impor CSV\Destino gbd.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Impor CSV\Destino gbd.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Impor CSV\Destino gbd.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Impor CSV\Destino gbd.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Impor CSV\Destino gbd.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Impor CSV\Origen csv"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origen de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de archivo plano"
+              localeId="3082"
+              name="Origen csv"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si las columnas de longitud cero se tratan como NULL."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, no se genera ninguna columna de salida con el nombre de archivo."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Impor CSV\Origen csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[bank]"
+                  connectionManagerRefId="Package.ConnectionManagers[bank]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano]"
+                  name="Salida de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[id]"
+                      length="7"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[id]"
+                      name="id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[regionname]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[regionname]"
+                      length="200"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[regionname]"
+                      name="regionname"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[countryname]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[countryname]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[countryname]"
+                      name="countryname"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[projectstatusdisplay]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[projectstatusdisplay]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[projectstatusdisplay]"
+                      name="projectstatusdisplay"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[last_stage_reached_name]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[last_stage_reached_name]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[last_stage_reached_name]"
+                      name="last_stage_reached_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[project_name]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[project_name]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[project_name]"
+                      name="project_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[pdo]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[pdo]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[pdo]"
+                      name="pdo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[impagency]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[impagency]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[impagency]"
+                      name="impagency"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[cons_serv_reqd_ind]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[cons_serv_reqd_ind]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[cons_serv_reqd_ind]"
+                      name="cons_serv_reqd_ind"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[url]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[url]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[url]"
+                      name="url"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[boardapprovaldate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[boardapprovaldate]"
+                      length="50"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[boardapprovaldate]"
+                      name="boardapprovaldate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[closingdate]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[closingdate]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[closingdate]"
+                      name="closingdate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[projectfinancialtype]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[projectfinancialtype]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[projectfinancialtype]"
+                      name="projectfinancialtype"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[curr_project_cost]"
+                      dataType="ui8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[curr_project_cost]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[curr_project_cost]"
+                      name="curr_project_cost"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[curr_ibrd_commitment]"
+                      dataType="ui8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[curr_ibrd_commitment]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[curr_ibrd_commitment]"
+                      name="curr_ibrd_commitment"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[curr_ida_commitment]"
+                      dataType="ui8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[curr_ida_commitment]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[curr_ida_commitment]"
+                      name="curr_ida_commitment"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[curr_total_commitment]"
+                      dataType="ui8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[curr_total_commitment]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[curr_total_commitment]"
+                      name="curr_total_commitment"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[grantamt]"
+                      dataType="ui8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[grantamt]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[grantamt]"
+                      name="grantamt"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[borrower]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[borrower]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[borrower]"
+                      name="borrower"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[lendinginstr]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[lendinginstr]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[lendinginstr]"
+                      name="lendinginstr"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[envassesmentcategorycode]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[envassesmentcategorycode]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[envassesmentcategorycode]"
+                      name="envassesmentcategorycode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[esrc_ovrl_risk_rate]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[esrc_ovrl_risk_rate]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[esrc_ovrl_risk_rate]"
+                      name="esrc_ovrl_risk_rate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[sector1]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[sector1]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[sector1]"
+                      name="sector1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[sector2]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[sector2]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[sector2]"
+                      name="sector2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[sector3]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[sector3]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[sector3]"
+                      name="sector3"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[theme1]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[theme1]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[theme1]"
+                      name="theme1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[theme2]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[theme2]"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].Columns[theme2]"
+                      name="theme2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si los datos están en formato binario."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[regionname]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="regionname" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[countryname]"
+                      codePage="1252"
+                      dataType="text"
+                      name="countryname" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[projectstatusdisplay]"
+                      codePage="1252"
+                      dataType="text"
+                      name="projectstatusdisplay" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[last_stage_reached_name]"
+                      codePage="1252"
+                      dataType="text"
+                      name="last_stage_reached_name" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[project_name]"
+                      codePage="1252"
+                      dataType="text"
+                      name="project_name" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[pdo]"
+                      codePage="1252"
+                      dataType="text"
+                      name="pdo" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[impagency]"
+                      codePage="1252"
+                      dataType="text"
+                      name="impagency" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[cons_serv_reqd_ind]"
+                      codePage="1252"
+                      dataType="text"
+                      name="cons_serv_reqd_ind" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[url]"
+                      codePage="1252"
+                      dataType="text"
+                      name="url" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[boardapprovaldate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="boardapprovaldate" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[closingdate]"
+                      codePage="1252"
+                      dataType="text"
+                      name="closingdate" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[projectfinancialtype]"
+                      codePage="1252"
+                      dataType="text"
+                      name="projectfinancialtype" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[curr_project_cost]"
+                      dataType="ui8"
+                      name="curr_project_cost" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[curr_ibrd_commitment]"
+                      dataType="ui8"
+                      name="curr_ibrd_commitment" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[curr_ida_commitment]"
+                      dataType="ui8"
+                      name="curr_ida_commitment" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[curr_total_commitment]"
+                      dataType="ui8"
+                      name="curr_total_commitment" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[grantamt]"
+                      dataType="ui8"
+                      name="grantamt" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[borrower]"
+                      codePage="1252"
+                      dataType="text"
+                      name="borrower" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[lendinginstr]"
+                      codePage="1252"
+                      dataType="text"
+                      name="lendinginstr" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[envassesmentcategorycode]"
+                      codePage="1252"
+                      dataType="text"
+                      name="envassesmentcategorycode" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[esrc_ovrl_risk_rate]"
+                      codePage="1252"
+                      dataType="text"
+                      name="esrc_ovrl_risk_rate" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[sector1]"
+                      codePage="1252"
+                      dataType="text"
+                      name="sector1" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[sector2]"
+                      codePage="1252"
+                      dataType="text"
+                      name="sector2" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[sector3]"
+                      codePage="1252"
+                      dataType="text"
+                      name="sector3" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[theme1]"
+                      codePage="1252"
+                      dataType="text"
+                      name="theme1" />
+                    <externalMetadataColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano].ExternalColumns[theme2]"
+                      codePage="1252"
+                      dataType="text"
+                      name="theme2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Impor CSV\Origen csv.Outputs[Salida de error de origen de archivo plano]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de archivo plano">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Columna de salida de error de origen de archivo plano"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de error de origen de archivo plano].Columns[Columna de salida de error de origen de archivo plano]"
+                      name="Columna de salida de error de origen de archivo plano" />
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Impor CSV\Origen csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Impor CSV\Origen csv.Outputs[Salida de error de origen de archivo plano].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Impor CSV.Paths[Salida de origen de archivo plano]"
+              endId="Package\Impor CSV\Destino gbd.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de origen de archivo plano"
+              startId="Package\Impor CSV\Origen csv.Outputs[Salida de origen de archivo plano]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{4B051462-2EB6-4E9C-A1C3-F6ABB2A5DAEB}"
+      DTS:From="Package\Borrar datos"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Impor CSV" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{F2F66C6B-1D25-428F-89D5-2A807F142BAB}"
+      DTS:From="Package\Impor CSV"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\Calculos" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Impor CSV"
+          TopLeft="171,177" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Borrar datos"
+          TopLeft="181,79" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="250.5,121">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13,56"
+              Start="0,0"
+              End="-13,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24"
+                    Point2="0,28"
+                    Point3="-4,28" />
+                  <mssgle:LineSegment
+                    End="-9,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9,28"
+                    Point2="-13,28"
+                    Point3="-13,32" />
+                  <mssgle:LineSegment
+                    End="-13,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Calculos"
+          TopLeft="213,281" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="237.5,219">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="36,62"
+              Start="0,0"
+              End="36,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="4,31" />
+                  <mssgle:LineSegment
+                    End="32,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32,31"
+                    Point2="36,31"
+                    Point3="36,35" />
+                  <mssgle:LineSegment
+                    End="36,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Impor CSV">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Impor CSV\Destino gbd"
+          TopLeft="245,233" />
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Impor CSV\Origen csv"
+          TopLeft="240,87" />
+        <EdgeLayout
+          Id="Package\Impor CSV.Paths[Salida de origen de archivo plano]"
+          TopLeft="305.5,129">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.5,104"
+              Start="0,0"
+              End="8.5,96.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48"
+                    Point2="0,52"
+                    Point3="4,52" />
+                  <mssgle:LineSegment
+                    End="4.5,52" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.5,52"
+                    Point2="8.5,52"
+                    Point3="8.5,56" />
+                  <mssgle:LineSegment
+                    End="8.5,96.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Impor CSV\Destino gbd">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Calculos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="133,42"
+          Id="Package\Calculos\Origen gbd"
+          TopLeft="163,42" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Calculos\Calculos por region"
+          TopLeft="182,146" />
+        <EdgeLayout
+          Id="Package\Calculos.Paths[Salida de origen de OLE DB]"
+          TopLeft="229.5,84">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="39.5,62"
+              Start="0,0"
+              End="39.5,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27"
+                    Point2="0,31"
+                    Point3="4,31" />
+                  <mssgle:LineSegment
+                    End="35.5,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="35.5,31"
+                    Point2="39.5,31"
+                    Point3="39.5,35" />
+                  <mssgle:LineSegment
+                    End="39.5,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Calculos\Destino regioncalcs"
+          TopLeft="207,263" />
+        <EdgeLayout
+          Id="Package\Calculos.Paths[Salida de agregado 1]"
+          TopLeft="269,188">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="25.5,75"
+              Start="0,0"
+              End="25.5,67.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.5"
+                    Point2="0,37.5"
+                    Point3="4,37.5" />
+                  <mssgle:LineSegment
+                    End="21.5,37.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.5,37.5"
+                    Point2="25.5,37.5"
+                    Point3="25.5,41.5" />
+                  <mssgle:LineSegment
+                    End="25.5,67.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Calculos\Origen gbd">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Calculos\Destino regioncalcs">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
